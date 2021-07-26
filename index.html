@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/svg" href="./img/icon/favicon.svg">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Bouncy</title>
+    </head>
+    <body>
+       <!--/sprite-->
+        <svg display="none">
+            <symbol id="about-icon1" viewBox="0 0 50 50">
+            <g><path class="st0" d="M30.2,14.6c-1.3,0-2.6,0.4-3.7,1.3c-0.4,0.3-0.8,0.7-1.2,1.2L25,17.4l-0.3-0.3c-0.4-0.5-0.8-0.9-1.2-1.2
+            c-1.1-0.8-2.3-1.3-3.7-1.3c-1.8,0-3.5,0.7-4.7,2c-1.2,1.3-1.9,3.1-1.9,5c0,2,0.7,3.8,2.3,5.7c1.4,1.7,3.4,3.4,5.8,5.4l0.1,0.1
+            c0.8,0.7,1.7,1.4,2.6,2.2c0.5,0.4,1.3,0.4,1.8,0c0.9-0.8,1.8-1.6,2.6-2.3c2.4-2,4.4-3.8,5.8-5.5c1.6-1.9,2.3-3.7,2.3-5.7
+            c0-1.9-0.7-3.7-1.9-5C33.6,15.3,32,14.6,30.2,14.6z"/>
+            <path class="st0" d="M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M34.9,27.8c-1.5,1.8-3.5,3.5-5.9,5.5
+            c-0.8,0.7-1.7,1.5-2.7,2.3c-0.4,0.3-0.9,0.5-1.4,0.5c-0.5,0-1-0.2-1.4-0.5c-0.9-0.8-1.8-1.5-2.6-2.2L21,33.3
+            c-2.4-2-4.4-3.8-5.9-5.5c-1.7-2-2.5-4-2.5-6.1c0-2.1,0.7-4,2-5.5c1.3-1.5,3.2-2.3,5.2-2.3c1.5,0,2.9,0.5,4.1,1.4
+            c0.4,0.3,0.7,0.6,1.1,1c0.3-0.4,0.7-0.7,1.1-1c1.2-0.9,2.6-1.4,4.1-1.4c2,0,3.8,0.8,5.2,2.3c1.3,1.4,2,3.4,2,5.5
+            C37.4,23.8,36.6,25.7,34.9,27.8z"/></g>
+            </symbol>
+            <symbol id="about-icon2" viewBox="0 0 50 50">
+            <g>
+            <path class="st0" d="M18.1,30.7c0,3.8,3.1,6.9,6.9,6.9s6.9-3.1,6.9-6.9v-4.9H18.1V30.7z"/>
+            <path class="st0" d="M24.6,23.6c-0.5-0.2-0.9-0.7-0.9-1.2v-1.9c0-0.6,0.4-1,0.9-1.2v-1.9c-3.6,0.2-6.5,3.2-6.5,6.9V25h6.5V23.6z"/>
+            <path class="st0" d="M24.6,22.3c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4v-1.9c0-0.2-0.2-0.4-0.4-0.4s-0.4,0.2-0.4,0.4V22.3z"/>
+            <path class="st0" d="M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M32.8,30.7c0,4.3-3.5,7.8-7.8,7.8
+            c-4.3,0-7.8-3.5-7.8-7.8v-6.6c0-4.2,3.3-7.6,7.3-7.8v-1.1c0-0.5-0.4-0.9-0.9-0.9h-2.3c-1,0-1.7-0.8-1.7-1.7v-0.7
+            c0-0.2,0.2-0.4,0.4-0.4c0.2,0,0.4,0.2,0.4,0.4v0.7c0,0.5,0.4,0.9,0.9,0.9h2.3c1,0,1.7,0.8,1.7,1.7v1.1c4.1,0.2,7.3,3.6,7.3,7.8
+            V30.7z"/>
+            <path class="st0" d="M25.4,17.3v1.9c0.5,0.2,0.9,0.7,0.9,1.2v1.9c0,0.6-0.4,1-0.9,1.2V25h6.5v-0.8C31.9,20.5,29,17.5,25.4,17.3z"/>
+            </g>
+            </symbol>
+            <symbol id="about-icon3" viewBox="0 0 50 50">
+            <g>
+            <path class="st0" d="M25,9.5C25,9.5,25,9.5,25,9.5c-2.7,0-5.2,1.1-7,2.9c-1.8,1.9-2.8,4.3-2.8,7c0,2.5,1,4.9,2.7,6.7
+            c1.4,1.5,2.4,3.4,2.7,5.4c0.1,0.4,0.4,0.8,0.8,0.9H24v-9.2c-0.9-0.4-1.5-1.3-1.5-2.2c0-0.6,0.3-1.3,0.7-1.7
+            c0.4-0.5,1.1-0.7,1.7-0.7c0.6,0,1.3,0.3,1.7,0.7c0.5,0.5,0.7,1.1,0.7,1.7s-0.3,1.3-0.7,1.7c-0.2,0.2-0.4,0.3-0.6,0.5v9.3h2.5
+            c0.4-0.2,0.7-0.5,0.8-0.9c0.3-2,1.2-3.9,2.7-5.4c1.8-1.8,2.8-4.3,2.8-6.8c0-2.6-1-5.1-2.9-7C30.1,10.5,27.6,9.5,25,9.5z"/>
+            <path class="st0" d="M28.2,33.5h-6.4c-0.2,0-0.4,0-0.6-0.1h-0.3v4.4h8.2v-4.4h-0.3C28.6,33.5,28.4,33.5,28.2,33.5z"/>
+            <path class="st0" d="M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M32.8,26.8c-1.3,1.3-2.1,3-2.4,4.9
+            c0,0.3-0.1,0.5-0.3,0.8h0v6.4H19.9v-6.4c-0.1-0.2-0.2-0.5-0.3-0.8c-0.3-1.8-1.1-3.6-2.4-4.9c-1.9-2-3-4.6-3-7.4
+            c0-2.9,1.1-5.6,3.1-7.7c2-2.1,4.7-3.2,7.6-3.2c2.9,0,5.6,1.1,7.7,3.1c2.1,2,3.2,4.8,3.2,7.7C35.8,22.1,34.7,24.8,32.8,26.8z"/>
+            <path class="st0" d="M25.6,32.3v-9.4l0.2-0.1c0.2-0.1,0.5-0.2,0.6-0.4C26.7,22,27,21.5,27,21c0-0.5-0.2-1-0.6-1.4l0,0
+            c-0.7-0.7-2-0.7-2.7,0C23.3,20,23,20.5,23,21c0,0.8,0.5,1.6,1.3,1.8l0.2,0.1v9.4H25.6z"/>
+            </g>
+            </symbol>
+            <symbol id="services-icon1" viewBox="0 0 50.7 50">
+            <g>
+            <path class="st0" d="M39.6,16.4c0-0.6-0.1-1.2-0.3-1.8c-0.1-0.2-0.2-0.3-0.4-0.4c-0.2,0-0.4,0-0.5,0.2l-2.3,2.3H35l-1.2-1.3v-1.1
+            L36,12c0.1-0.1,0.2-0.3,0.1-0.5c0-0.2-0.2-0.3-0.4-0.4c-0.6-0.2-1.2-0.3-1.8-0.3c-1.8,0-3.5,0.8-4.5,2.3c-0.9,1.3-1.3,2.9-0.9,4.4
+            l0.1,0.3l-4.1,4.1l-6.8-6.8v-1.3c0-0.2-0.1-0.4-0.3-0.5l-3.9-2.4c-0.2-0.1-0.5-0.1-0.7,0.1l-1.6,1.6c-0.2,0.2-0.2,0.5-0.1,0.7
+            l2.4,3.9c0.1,0.2,0.3,0.3,0.5,0.3l1.3,0l6.8,6.8l-4.1,4.1l-0.3-0.1c-1.5-0.3-3.1,0-4.4,0.9c-1.5,1.1-2.3,2.7-2.3,4.5
+            c0,0.6,0.1,1.2,0.3,1.8c0.1,0.2,0.2,0.3,0.4,0.4c0.2,0,0.4,0,0.5-0.1l2.3-2.3h1.1l1.3,1.3v1.1L14.7,38c-0.1,0.1-0.2,0.3-0.2,0.5
+            c0,0.2,0.2,0.3,0.4,0.4c0.6,0.2,1.2,0.3,1.8,0.3c1.8,0,3.4-0.8,4.5-2.3c0.9-1.3,1.3-2.9,0.9-4.4l-0.1-0.3l3.3-3.3l0.8,0.8l-0.3,0.3
+            c-0.1,0.1-0.2,0.3-0.2,0.4c0,0.1,0.1,0.3,0.2,0.4c0.2,0.2,0.5,0.2,0.8,0l0.3-0.3l7,7.7c0.6,0.6,1.5,1,2.3,1s1.7-0.3,2.4-1
+            c0.6-0.6,1-1.5,1-2.4c0-0.9-0.4-1.7-1-2.4l-7.6-7l0.3-0.3c0.2-0.2,0.2-0.6,0-0.8c-0.2-0.2-0.6-0.2-0.8,0l-0.3,0.3L29.3,25l3.3-3.3
+            l0.3,0.1c0.4,0.1,0.8,0.1,1.2,0.1C37.1,21.9,39.6,19.4,39.6,16.4z"/>
+            <path class="st0" d="M25.4-0.4C11.4-0.4,0,11,0,25s11.4,25.4,25.4,25.4S50.7,39,50.7,25S39.4-0.4,25.4-0.4z M31.9,24.8
+            c0.4,0.4,0.6,1.1,0.3,1.7l7,6.4c0.8,0.8,1.3,1.9,1.3,3.1c0,1.1-0.4,2.2-1.2,3c-0.8,0.8-1.9,1.2-3,1.2s-2.2-0.4-3-1.2l-6.5-7
+            c-0.5,0.2-1.2,0.1-1.7-0.3c-0.2-0.2-0.3-0.4-0.4-0.6l-1.6,1.6c0.3,1.7-0.1,3.5-1.1,4.9c-1.2,1.7-3.2,2.7-5.3,2.7
+            c-0.7,0-1.4-0.1-2.1-0.3c-0.5-0.2-0.9-0.6-1-1.1c-0.1-0.5,0-1,0.4-1.4l2-2V35l-0.7-0.7h-0.3l-2,2c-0.4,0.4-0.9,0.5-1.4,0.4
+            c-0.5-0.1-0.9-0.5-1.1-1c-0.2-0.7-0.3-1.4-0.3-2.1c0-2.1,1-4,2.7-5.3c1.4-1,3.2-1.4,4.9-1.1l3-3L15,18.4l-1,0c-0.5,0-1-0.3-1.3-0.7
+            l-2.4-3.9c-0.4-0.6-0.3-1.3,0.2-1.8l1.6-1.6c0.5-0.5,1.2-0.6,1.8-0.2l3.9,2.4c0.4,0.3,0.7,0.8,0.7,1.3v1l5.9,5.9l3.1-3.1
+            c-0.3-1.7,0.1-3.5,1.1-4.9c1.2-1.7,3.2-2.7,5.3-2.7c0.7,0,1.4,0.1,2.1,0.3c0.5,0.2,0.9,0.6,1,1.1c0.1,0.5,0,1-0.4,1.4l-2,2v0.4
+            l0.7,0.7h0.3l2-2c0.4-0.4,0.9-0.5,1.4-0.4c0.5,0.1,0.9,0.5,1.1,1c0.2,0.7,0.3,1.4,0.3,2.1c0,3.6-2.9,6.5-6.5,6.5
+            c-0.4,0-0.8,0-1.1-0.1l-1.6,1.6C31.5,24.4,31.7,24.6,31.9,24.8z"/>
+            </g>
+            </symbol>
+            <symbol id="services-icon2" viewBox="0 0 50 50">
+
+            <g><path class="cls-1" d="M25.6,38.78h2.29a.75.75,0,0,0,.24,0l-1.29-9.16h-.19l-1.29,9.16A.65.65,0,0,0,25.6,38.78Z"/><path class="cls-1" d="M36.71,11.22H14.54a.71.71,0,0,0-.71.72v5.3a.71.71,0,0,0,.71.72H36.71a.71.71,0,0,0,.71-.72v-5.3A.71.71,0,0,0,36.71,11.22Z"/><path class="cls-1" d="M25,0A25,25,0,1,0,50,25,25,25,0,0,0,25,0ZM40.38,16.21a1.1,1.1,0,0,1-1.11,1.11h-.73a1.84,1.84,0,0,1-1.83,1.76H14.54a1.84,1.84,0,0,1-1.84-1.84V15.15H11a.22.22,0,0,0-.22.22V20a.22.22,0,0,0,.22.22H26a1.35,1.35,0,0,1,1.35,1.34v6.85h.51l1.44,10.26a.94.94,0,0,1-.23.73,1.51,1.51,0,0,1-1.14.46H25.6a1.54,1.54,0,0,1-1.14-.45,1,1,0,0,1-.23-.73l1.44-10.27h.51V21.6a.22.22,0,0,0-.22-.22H11A1.34,1.34,0,0,1,9.62,20V15.37A1.35,1.35,0,0,1,11,14H12.7V11.94a1.84,1.84,0,0,1,1.84-1.84H36.71a1.84,1.84,0,0,1,1.83,1.75h.73A1.11,1.11,0,0,1,40.38,13Z"/></g>
+
+            </symbol>
+            <symbol id="services-icon3" viewBox="0 0 50 50">
+            <g>
+            <path class="st0" d="M32.2,17.7c-1.3,0-1.9,0.4-2.5,0.8l-0.1,0.1c-0.3,0.2-0.6,0.4-1,0.5l-0.1,0c-0.1,0-0.1,0.1-0.2,0.1
+            c-0.1,0-0.2,0.1-0.3,0.1c-0.8,0.3-1.9,0.5-3,0.5c-1.2,0-2.4-0.2-3.3-0.6c-0.1,0-0.2-0.1-0.3-0.1c-0.4-0.2-0.7-0.4-1-0.6
+            c-0.7-0.4-1.2-0.8-2.6-0.8c-1,0-2.1,0.5-3.1,1.5c-3,3-5,9.5-5,13.8c0,1.1,0.2,3.8,1.9,3.8c1.3,0,3-1.1,5-3.2
+            c1.5-1.6,3.6-2.6,5.7-2.6h5.4c2.1,0,4.2,1,5.7,2.6c2,2.1,3.7,3.2,4.9,3.2c1.7,0,1.9-2.6,1.9-3.8c0-4.2-2-10.7-5-13.8
+            C34.3,18.2,33.3,17.7,32.2,17.7z M19.3,26.3h-1v1c0,0.5-0.4,1-1,1c-0.5,0-1-0.4-1-1v-1h-1c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1h1v-1
+            c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1v1h1c0.5,0,1,0.4,1,1C20.2,25.8,19.8,26.3,19.3,26.3z M26.9,26.3h-3.8c-0.5,0-1-0.4-1-1
+            c0-0.5,0.4-1,1-1h3.8c0.5,0,1,0.4,1,1C27.9,25.8,27.4,26.3,26.9,26.3z M32.6,22.4c0.5,0,1,0.4,1,1c0,0.5-0.4,1-1,1
+            c-0.5,0-1-0.4-1-1C31.7,22.9,32.1,22.4,32.6,22.4z M30.7,26.3c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1
+            C31.7,25.8,31.3,26.3,30.7,26.3z M32.6,28.2c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1C33.6,27.7,33.2,28.2,32.6,28.2z
+            M34.5,26.3c-0.5,0-1-0.4-1-1c0-0.5,0.4-1,1-1c0.5,0,1,0.4,1,1C35.5,25.8,35.1,26.3,34.5,26.3z"/>
+            <path class="st0" d="M25,0C11.2,0,0,11.2,0,25s11.2,25,25,25s25-11.2,25-25S38.8,0,25,0z M41.3,33c0,4.3-2.1,4.8-2.9,4.8
+            c-1.6,0-3.4-1.2-5.7-3.5c-1.3-1.4-3.2-2.3-5-2.3h-5.4c-1.8,0-3.6,0.8-4.9,2.3c-2.2,2.3-4.1,3.5-5.7,3.5c-0.9,0-2.9-0.5-2.9-4.8
+            c0-4.4,2.1-11.3,5.2-14.5c1.2-1.2,2.5-1.8,3.8-1.8c1.7,0,2.4,0.5,3.1,1c0.3,0.2,0.5,0.4,0.9,0.5c0.1,0.1,0.2,0.1,0.3,0.1
+            c0.8,0.3,1.7,0.5,2.7,0.5c-0.7-0.8-1-1.6-1-2.5c0-1.3,0.8-2.2,1.5-3.1c0.6-0.7,1.2-1.4,1.5-2.3c0.5-1.5,0.1-3.4-1.2-5.7
+            c-0.1-0.2-0.1-0.5,0.2-0.7c0.2-0.1,0.5-0.1,0.7,0.2c1.5,2.5,1.9,4.7,1.3,6.5c-0.4,1.2-1.1,2-1.7,2.7c-0.7,0.8-1.3,1.5-1.3,2.4
+            c0,0.8,0.5,1.6,1.3,2.4c0,0,0,0,0,0c0.6-0.1,1.2-0.2,1.7-0.4c0.1,0,0.2-0.1,0.2-0.1l0.3-0.1c0.3-0.1,0.5-0.3,0.8-0.5l0.1-0.1
+            c0.7-0.5,1.5-1,3.1-1c1.3,0,2.6,0.6,3.8,1.8C39.2,21.7,41.3,28.6,41.3,33L41.3,33z"/>
+            </g>
+            </symbol>
+            <symbol id="services-icon4" viewBox="0 0 50.8 50.8">
+            <g>
+            <path class="st0" d="M45,26.6h-4.5c-3.5,0-6.3,2.8-6.3,6.3c0,2.3-1.6,4.2-3.8,4.4c-1.2,0.2-2.5-0.2-3.4-1c-0.9-0.8-1.5-2-1.5-3.2
+            v-3.8l0.4-0.1c3.3-0.7,5.7-3.6,5.7-7v-3.9c0-0.3-0.2-0.5-0.5-0.5h-2.4v-5.3c0-0.5-0.4-0.9-0.8-1c-0.3,0-0.5,0.1-0.7,0.2
+            c-0.2,0.2-0.3,0.4-0.3,0.7v5.4h-4.8v-5.3c0-0.5-0.4-0.9-0.8-1c-0.3,0-0.5,0.1-0.7,0.2s-0.3,0.4-0.3,0.7v5.4h-2.4
+            c-0.3,0-0.5,0.2-0.5,0.5v3.9c0,3.4,2.4,6.3,5.7,7l0.4,0.1v3.7c0,3.5,2.8,6.4,6.1,6.6c1.8,0.1,3.4-0.6,4.7-1.8c1.3-1.2,2-2.8,2-4.6
+            c0-2.4,1.9-4.4,4.3-4.4H45c0.6,0,1-0.5,1-1C46,27,45.5,26.6,45,26.6z"/>
+            <path class="st0" d="M25.4,0C11.4,0,0,11.4,0,25.4c0,14,11.4,25.4,25.4,25.4c14,0,25.4-11.4,25.4-25.4C50.8,11.4,39.4,0,25.4,0z
+            M45,29.6h-4.4c-1.8,0-3.3,1.5-3.3,3.3c0,2.1-0.8,4-2.3,5.4c-1.4,1.3-3.2,2.1-5.1,2.1c-0.1,0-0.2,0-0.3,0c-3.9-0.1-7.1-3.5-7.1-7.6
+            V30c-3.6-0.9-6.1-4.2-6.1-7.9v-3.9c0-0.8,0.7-1.5,1.5-1.5h1.4v-4.4c0-0.5,0.2-1.1,0.6-1.4c0.4-0.4,0.9-0.5,1.5-0.5
+            c1,0.1,1.8,1,1.8,2v4.3h2.8v-4.4c0-0.5,0.2-1.1,0.6-1.4c0.4-0.4,0.9-0.5,1.5-0.5c1,0.1,1.7,1,1.7,2v4.3h1.4c0.8,0,1.5,0.7,1.5,1.5
+            v3.9c0,3.7-2.6,7-6.1,7.9v3c0,1,0.4,1.9,1.1,2.5c0.7,0.6,1.7,0.9,2.6,0.8c1.6-0.2,2.9-1.7,2.9-3.4c0-4,3.3-7.3,7.3-7.3H45
+            c1.1,0,2,0.9,2,2C47,28.7,46.1,29.6,45,29.6z"/>
+            </g>
+            </symbol>
+            <symbol id="diagram-services1" viewBox="0 0 120 120">
+            <g><path class="st0" d="M119.2,50.2l-0.2-1.3l-2.8,4.6l0,0.2c3.4,30.9-18.9,58.9-49.9,62.3c-2.1,0.2-4.2,0.3-6.2,0.4
+            C29,116.3,3.6,91,3.6,59.9S28.9,3.5,60.2,3.5h0.3L62.5,0h-2.5C27,0,0.2,26.9,0.2,59.9c0,33,26.9,59.9,59.9,59.9
+            c33,0,59.9-26.9,59.9-59.9C120,56.9,119.7,53.6,119.2,50.2z"/></g>
+            </symbol>
+            <symbol id="diagram-services2" viewBox="0 0 119.7 119.7"><g><path class="st0" d="M112.1,82.3l-0.1,0.1c-8.9,20.6-29.3,34-51.8,34h-0.3C29,116.3,3.7,90.9,3.6,59.9C3.6,28.8,28.9,3.5,60,3.4
+            l0.5,0V0H60C27,0,0.1,26.9,0.1,59.9c0,32.9,26.6,59.6,59.5,59.9v0h0.4h0.3h0.2v0c25.1-0.1,47.7-16,56.2-39.6l0.5-1.5L112.1,82.3z"/>
+            <path class="st0" d="M59.7,2.4L59.7,2.4L59.7,2.4z"/></g></symbol>
+            <symbol id="diagram-services3" viewBox="0 0 120 120"><g><path class="st0" d="M81.1,112.5l-0.3,0.1c-6.6,2.7-13.6,4-20.8,4C28.8,116.6,3.4,91.2,3.4,60c0-15.1,5.9-29.4,16.6-40.1
+            C30.7,9.3,44.8,3.5,59.8,3.5c0.1,0,0.1,0,0.2,0l0.2,0l2.8-3.2l-0.9-0.1C61.4,0,60.7,0,60,0C26.9,0,0,26.9,0,60c0,33.1,26.9,60,60,60
+            c8,0,15.9-1.6,23.3-4.7l0.7-0.3L81.1,112.5z"/></g>
+            </symbol>
+            <symbol id="link" viewBox="0 0 30 30"><g><path class="st0" d="M12.3,19.2l-2.4,2.4c-1,1-2.6,1-3.5,0c-1-1-1-2.6,0-3.5l4.7-4.7c1-1,2.6-1,3.5,0c0.3,0.3,0.9,0.3,1.2,0
+            c0.3-0.3,0.3-0.9,0-1.2c-1.6-1.6-4.3-1.6-5.9,0l-4.7,4.7c-1.6,1.6-1.6,4.3,0,5.9c1.6,1.6,4.3,1.6,5.9,0l2.4-2.4
+            c0.3-0.3,0.3-0.9,0-1.2C13.1,18.9,12.6,18.9,12.3,19.2z"/>
+            <path class="st0" d="M22.8,5.2c-1.6-1.6-4.3-1.6-5.9,0L14.1,8c-0.3,0.3-0.3,0.9,0,1.2c0.3,0.3,0.9,0.3,1.2,0l2.8-2.8
+            c1-1,2.6-1,3.5,0c1,1,1,2.6,0,3.5l-5.2,5.2c-1,1-2.6,1-3.5,0c-0.3-0.3-0.9-0.3-1.2,0s-0.3,0.9,0,1.2c1.6,1.6,4.3,1.6,5.9,0
+            l5.2-5.2C24.4,9.5,24.4,6.8,22.8,5.2z"/>
+            </g></symbol>
+            <symbol id="heart" viewBox="0 0 30 30"><g><path class="st0" d="M15,25.2c-0.3,0-0.6-0.1-0.8-0.3c-0.8-0.8-1.6-1.6-2.3-2.3l0,0c-2.1-2-3.8-3.7-5.1-5.4c-1.4-1.9-2-3.7-2-5.6
+            c0-1.9,0.6-3.6,1.6-4.9c1.1-1.3,2.5-2,4.1-2c1.2,0,2.3,0.4,3.2,1.2c0.5,0.4,0.9,0.9,1.3,1.5c0.4-0.6,0.8-1.1,1.3-1.5
+            c1-0.8,2-1.2,3.2-1.2c1.6,0,3,0.7,4.1,2c1,1.3,1.6,3,1.6,4.9c0,1.9-0.6,3.7-2,5.6c-1.2,1.7-3,3.4-5.1,5.4c-0.7,0.7-1.5,1.4-2.3,2.3
+            C15.6,25.1,15.3,25.2,15,25.2z M10.5,6.1c-1.2,0-2.4,0.6-3.2,1.6c-0.8,1-1.3,2.4-1.3,4c0,1.6,0.5,3.1,1.8,4.8
+            c1.2,1.6,2.9,3.3,4.9,5.2l0,0c0.7,0.7,1.5,1.4,2.3,2.3c0.8-0.8,1.6-1.6,2.3-2.3c2-1.9,3.8-3.6,4.9-5.2c1.2-1.6,1.8-3.1,1.8-4.8
+            c0-1.6-0.5-3-1.3-4c-0.8-1-2-1.6-3.2-1.6c-0.9,0-1.7,0.3-2.5,1c-0.7,0.6-1.1,1.3-1.4,1.8c-0.1,0.3-0.4,0.4-0.7,0.4s-0.5-0.2-0.7-0.4
+            c-0.3-0.5-0.7-1.2-1.4-1.8C12.2,6.4,11.4,6.1,10.5,6.1z"/></g></symbol>
+            <symbol id="mail" viewBox="0 0 50 50"><g><g>
+            <path d="M50,41.7H0V8.3h50V41.7z M1,40.8h48.1V9.3H1V40.8z"/>
+            </g>
+            <g>
+            <polygon points="30.1,27.2 29.5,26.5 47.6,9.4 2.4,9.4 20.5,26.5 19.9,27.2 0,8.4 50,8.4     "/>
+            </g>
+            <g>
+            <path d="M50,41.6H0l20.3-15.4l4.7,4.7l4.7-4.7L50,41.6z M2.9,40.6h44.2L29.8,27.5L25,32.3l-4.8-4.8L2.9,40.6z"/>
+            </g></g></symbol>
+            <symbol id="map-pointer" viewBox="0 0 50 50"><g><g>
+            <path d="M25,50l-0.4-0.5C21.9,46,8.1,27.6,8.1,17c0-9.3,7.6-17,17-17h0c9.3,0,17,7.6,17,17c0,10.6-13.8,29-16.6,32.6L25,50z M25,1
+            c-8.8,0-15.9,7.2-16,16c0,9.9,12.5,26.9,16,31.4c3.4-4.5,16-21.5,16-31.4C41,8.2,33.8,1,25,1L25,1z"/>
+            </g>
+            <g>
+            <path d="M25,30.5L25,30.5c-7.4,0-13.3-6-13.3-13.3c0-7.3,6-13.3,13.3-13.3c7.4,0,13.3,6,13.3,13.3C38.3,24.5,32.4,30.5,25,30.5z
+            M25,4.9c-6.8,0-12.3,5.5-12.3,12.3S18.2,29.5,25,29.5c6.8,0,12.3-5.5,12.3-12.3C37.3,10.4,31.8,4.9,25,4.9z"/>
+            </g></g></symbol>
+            <symbol id="telephone" viewBox="0 0 50.2 50.2"><g>
+    <path d="M39.8,50.3c-0.2,0-0.4,0-0.6,0c-3.8-0.2-7.4-1.7-10-3C22,43.9,15.8,39,10.6,32.8c-4.3-5.1-7.2-9.9-9.1-15.1
+        C0.3,14.5-0.1,11.9,0,9.5v0c0.2-1.7,0.8-3.1,2-4.3L6.2,1c1.6-1.5,3.5-1.5,5,0c0.6,0.6,1.3,1.2,1.9,1.9l4.9,4.9
+        c0.8,0.8,1.3,1.7,1.3,2.6s-0.4,1.7-1.3,2.6l-1.3,1.3c-1,1-1.9,1.9-2.9,2.8c-0.7,0.7-0.7,1.2-0.4,1.9c0.9,2.1,2.1,4.1,3.9,6.4
+        c3.3,4.1,6.9,7.3,10.8,9.8c0.4,0.3,0.8,0.5,1.2,0.7l0.3,0.1c0.5,0.2,0.9,0.5,1.3,0.7c1.2,0.6,1.9-0.1,2.1-0.3l4.2-4.2
+        c1.6-1.6,3.6-1.5,5,0l6.8,6.8c1.6,1.6,1.6,3.5,0,5.2c-0.5,0.5-1,1-1.5,1.5l-0.1,0.1c-0.7,0.7-1.5,1.5-2.2,2.3
+        C43.7,49.6,42,50.3,39.8,50.3z M1.3,9.6c-0.2,2.2,0.3,4.6,1.4,7.6c1.9,5,4.7,9.7,8.9,14.7c5.1,6.1,11.2,10.9,18.2,14.2
+        c2.5,1.2,5.9,2.6,9.5,2.9c0.2,0,0.4,0,0.5,0c1.8,0,3.2-0.6,4.4-1.9c0.7-0.9,1.5-1.6,2.3-2.4l0.1-0.1c0.5-0.5,1-1,1.5-1.5
+        c1.2-1.2,1.2-2.3,0-3.4L41.3,33c-0.3-0.3-0.9-0.8-1.6-0.8c-0.5,0-1.1,0.3-1.6,0.8l-4.2,4.2c-1,1-2.3,1.2-3.5,0.6l0.2-0.6l-0.3,0.6
+        c-0.4-0.3-0.8-0.5-1.3-0.7L28.7,37c-0.4-0.2-0.9-0.4-1.3-0.7c-4-2.6-7.6-5.9-11.1-10.1c-1.9-2.4-3.2-4.4-4.1-6.6l0-0.1
+        c-0.3-0.8-0.5-2,0.7-3.2c1.1-1,2-1.9,2.9-2.9l1.3-1.3c0.6-0.6,0.9-1.1,0.9-1.7s-0.3-1.1-0.9-1.7l-4.9-4.9c-0.6-0.7-1.3-1.3-1.9-1.9
+        c-1.1-1.1-2.2-1-3.3,0L2.9,6.1C2,7.1,1.4,8.2,1.3,9.6z"/>
+</g></symbol>
+            <symbol id="facebook" viewBox="0 0 25 25"><g><path d="M12.5,0C5.6,0,0,5.6,0,12.5S5.6,25,12.5,25S25,19.4,25,12.5S19.4,0,12.5,0z M16.3,7.5h-1.4c-1.1,0-1.3,0.5-1.3,1.3v1.8H16
+    l-0.3,2.7h-2.1V20h-2.7v-6.7H8.7v-2.7h2.2V8.5c0-2.3,1.4-3.5,3.3-3.5c0.9,0,1.8,0.1,2,0.1V7.5z"/></g></symbol>
+           <symbol id="twitter" viewBox="0 0 25 25"><g><path d="M12.5,0C5.6,0,0,5.6,0,12.5S5.6,25,12.5,25S25,19.4,25,12.5S19.4,0,12.5,0z M19.8,8.7c0,0.2,0,0.3,0,0.5
+    c0,5-3.8,10.7-10.7,10.7c-2.1,0-4.1-0.6-5.8-1.7c0.3,0,0.6,0.1,0.9,0.1c1.8,0,3.4-0.6,4.7-1.6c-1.7,0-3-1.1-3.5-2.6
+    c0.2,0.1,0.5,0.1,0.7,0.1c0.3,0,0.7,0,1-0.1c-1.7-0.4-3-1.9-3-3.7c0,0,0,0,0,0c0.5,0.3,1.1,0.5,1.7,0.5c-1-0.7-1.7-1.8-1.7-3.1
+    c0-0.7,0.2-1.3,0.5-1.9c1.9,2.3,4.6,3.8,7.8,4c-0.1-0.3-0.1-0.6-0.1-0.9C12.3,6.7,14,5,16,5c1.1,0,2.1,0.5,2.8,1.2
+    c0.9-0.2,1.7-0.5,2.4-0.9c-0.3,0.9-0.9,1.6-1.7,2.1c0.8-0.1,1.5-0.3,2.2-0.6C21.2,7.6,20.6,8.2,19.8,8.7z"/></g></symbol>
+           <symbol id="linkedin" viewBox="0 0 25.1 25.1"><g>
+    <polygon class="st0" points="13.6,11.4 13.6,11.3 13.6,11.4     "/>
+    <path class="st0" d="M12.5,0C5.6,0,0,5.6,0,12.5s5.6,12.5,12.5,12.5c6.9,0,12.5-5.6,12.5-12.5S19.5,0,12.5,0z M4.6,5.4
+        c0.4-0.3,0.9-0.5,1.5-0.5c0.5,0,0.9,0.2,1.3,0.5c0.3,0.3,0.5,0.8,0.5,1.3c0,0.5-0.2,0.9-0.5,1.3C7,8.3,6.5,8.5,5.9,8.5h0
+        c-0.6,0-1-0.2-1.4-0.5C4.2,7.6,4,7.2,4,6.7C4,6.2,4.2,5.8,4.6,5.4z M7.9,20.1H4.2V9.9h3.7V20.1z M21.1,20.1h-3.7v-5.5
+        c0-0.7-0.1-1.3-0.4-1.7c-0.3-0.4-0.8-0.6-1.4-0.6c-0.5,0-0.9,0.1-1.2,0.4c-0.3,0.3-0.5,0.5-0.7,0.9c0,0.1-0.1,0.2-0.1,0.4
+        c0,0.1,0,0.3,0,0.4v5.7H9.9c0-1.7,0-3.3,0-4.8v-1.8v-1.7c0-0.5,0-0.9,0-1.3c0-0.4,0-0.6,0-0.7h3.7v1.5c0.1-0.2,0.3-0.4,0.4-0.6
+        c0.2-0.2,0.4-0.4,0.7-0.5c0.3-0.2,0.6-0.3,0.9-0.4c0.4-0.1,0.8-0.2,1.3-0.2c0.6,0,1.2,0.1,1.7,0.3c0.5,0.2,1,0.5,1.3,0.9
+        c0.4,0.4,0.7,0.9,0.9,1.4c0.2,0.6,0.3,1.3,0.3,2V20.1z"/>
+</g></symbol>
+           <symbol id="instagram" viewBox="0 0 25 25"><g>
+    <path d="M18.4,8.1c-0.1-0.3-0.3-0.6-0.6-0.9c-0.2-0.2-0.5-0.4-0.9-0.6c-0.3-0.1-0.7-0.2-1.4-0.3c-0.8,0-1,0-3,0c-2,0-2.2,0-3,0
+        c-0.7,0-1.1,0.2-1.4,0.3C7.8,6.8,7.5,7,7.2,7.2C7,7.5,6.8,7.8,6.7,8.1C6.6,8.3,6.4,8.7,6.4,9.5c0,0.8,0,1,0,3s0,2.2,0,3
+        c0,0.7,0.2,1.1,0.3,1.4c0.1,0.3,0.3,0.6,0.6,0.9c0.2,0.2,0.5,0.4,0.9,0.6c0.3,0.1,0.7,0.2,1.4,0.3c0.8,0,1,0,3,0c2,0,2.2,0,3,0
+        c0.7,0,1.1-0.2,1.4-0.3c0.7-0.3,1.2-0.8,1.4-1.4c0.1-0.3,0.2-0.7,0.3-1.4c0-0.8,0-1,0-3s0-2.2,0-3C18.6,8.7,18.5,8.3,18.4,8.1z
+         M12.5,16.4c-2.1,0-3.9-1.7-3.9-3.9c0-2.1,1.7-3.9,3.9-3.9c2.1,0,3.9,1.7,3.9,3.9C16.4,14.6,14.6,16.4,12.5,16.4z M16.5,9.4
+        c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9c0.5,0,0.9,0.4,0.9,0.9C17.4,9,17,9.4,16.5,9.4z"/>
+    <path d="M12.5,10c-1.4,0-2.5,1.1-2.5,2.5c0,1.4,1.1,2.5,2.5,2.5c1.4,0,2.5-1.1,2.5-2.5C15,11.1,13.9,10,12.5,10z"/>
+    <path d="M12.5,0C5.6,0,0,5.6,0,12.5S5.6,25,12.5,25S25,19.4,25,12.5S19.4,0,12.5,0z M20,15.6c0,0.8-0.2,1.3-0.3,1.8
+        c-0.4,1-1.2,1.8-2.2,2.2c-0.5,0.2-1,0.3-1.8,0.3c-0.8,0-1.1,0-3.1,0s-2.3,0-3.1,0c-0.8,0-1.3-0.2-1.8-0.3c-0.5-0.2-1-0.5-1.3-0.9
+        c-0.4-0.4-0.7-0.8-0.9-1.3c-0.2-0.5-0.3-1-0.3-1.8c0-0.8,0-1.1,0-3.1c0-2,0-2.3,0-3.1c0-0.8,0.2-1.3,0.3-1.8c0.2-0.5,0.5-1,0.9-1.3
+        c0.4-0.4,0.8-0.7,1.3-0.9c0.5-0.2,1-0.3,1.8-0.3c0.8,0,1.1,0,3.1,0s2.3,0,3.1,0c0.8,0,1.3,0.2,1.8,0.3c0.5,0.2,1,0.5,1.3,0.9
+        c0.4,0.4,0.7,0.8,0.9,1.3c0.2,0.5,0.3,1,0.3,1.8c0,0.8,0,1.1,0,3.1C20,14.5,20,14.8,20,15.6z"/>
+</g></symbol>
+
+        </svg>
+        <div class="page">
+            <div class="intro" id="hallo">
+                <header class="header">
+                    <div class="container">
+    
+                        <div class="header-inner">
+                            <div class="header-brand">Bouncy</div>
+                            <nav>
+                                <a class="nav-link" href="#hallo">Hallo</a>
+                                <a class="nav-link" href="#about">About</a>
+                                <a class="nav-link" href="#services">Services</a>
+                                <a class="nav-link" href="#portfolio">Portfolio</a>
+                                <a class="nav-link" href="#team">Team</a>
+                                <a class="nav-link" href="#blog">Blog</a>
+                                <a class="nav-link" href="#contact">Contact</a>
+                            </nav>
+                            <button class="burger" type="button">
+                                <span class="burger__item">Menu</span>
+                            </button>
+                        </div>
+                    </div><!--/container-->
+                </header>
+                <nav class="burger__menu">
+                    <ul  class="burger__list">
+                        <li>
+                            <a class="burger__menu__link" href="#hallo">Hallo</a>
+                        </li>
+                        <li>
+                            <a class="burger__menu__link" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="burger__menu__link" href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a class="burger__menu__link" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="burger__menu__link" href="#team">Team</a>
+                        </li>
+                        <li>
+                            <a class="burger__menu__link" href="#blog">Blog</a>
+                        </li>
+                        <li><a class="burger__menu__link" href="#contact">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                
+                <div class="intro-text">
+                    <div class="container">
+                        <p class="intro-title">we are code cafe</p>
+                        <p class="intro-slogan">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis <br>praesentium voluptatum</p>
+                    </div>
+                </div>
+
+                <div class="icon-intro">
+                    <a href="#about" >
+                        <img src="img/icon/intro-icon.png" alt="scroll">
+                    </a>
+                </div>
+            </div><!--/intro-->
+
+
+            <div class="about" id="about">
+                <div class="about-text">
+                    <h1 class="title-about" >This is bouncy</h1>
+                    <div class="about-content">
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. </p>
+                    <button class="btn" type="button">Read More</button>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="img/about-image.png" alt="#">
+                </div>
+            </div><!--/about-->
+
+            <div class="details-about">
+                <div class="details-about-title">
+                    <h1 class="title">Details About Bouncy</h1>
+                    <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui<br>blanditiis praesentium</p>
+                </div>
+
+                <div class="about-icon">
+                    <a class="icon-link" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#about-icon1"></use>
+                        </svg>
+                    </a>
+
+                    <a class="icon-link" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#about-icon2"></use>
+                        </svg>
+                    </a>
+
+                    <a class="icon-link" href="#">
+                        <svg class="icon">
+                            <use xlink:href="#about-icon3"></use>
+                        </svg>
+                    </a>
+                </div>
+
+
+                <div class="details-content">
+                   <h2 class="subtitle subtitle-ditails">Creativ ideas</h2>
+                    <div class="details-text"><p> At <span class="text-green">vero</span> eos et accusamus et iusto odio<br> <span class="text-bold">dignissimos</span> ducimus qui blanditiis <br>praesentium voluptatum deleniti atque <br>corrupti quos dolores </p></div>
+
+                    <div class="details-text"><p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque <span class="text-bold">corrupti quos</span> dolores et quas molestias <span class="text-green">excepturi</span> sint occaecati cupiditate non provident, <span class="text-bold">similique</span> sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem </p></div>
+                </div>
+
+            </div><!--/details-about-->
+
+            <div class="featured>">
+                <h1 class="title">FEATURED PROJECTS</h1>
+                <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br>blanditiis praesentium</p>
+
+                <div class="featured-work">
+                    <div class="work-item">
+                        <img class="work-photo" src="img/featured-work1.png" alt="featured">
+                        <div class="work-content">handmade</div>
+                    </div>
+
+                    <div class="work-item">
+                        <img class="work-photo" src="img/featured-work2.png" alt="featured">
+                        <div class="work-content">vintage</div>
+                    </div>
+
+                    <div class="work-item">
+                        <img class="work-photo" src="img/featured-work3.png" alt="featured">
+                        <div class="work-content">branding</div>
+                    </div>
+                </div>
+
+                <div class="featured-footer">
+                        <div class="featured-footer-content">
+                            <p>At vero eos et <strong>accusamus</strong> et iusto odio dignissimos ducimus qui blanditiis </p>
+                            <button class="btn btn-wite">Submit Now</button>
+                        </div>
+                </div>
+            </div> <!--/featured-->
+
+            <div class="services" id="services">
+                <h1 class="title">our services</h1>
+                <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus <br>qui blanditiis praesentium</p>
+
+                <div class="services-content">
+                    <div class="services-icon">
+                        <a class="icon-link column-icon" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#services-icon1"></use>
+                            </svg>
+                        </a>
+
+                        <a class="icon-link column-icon" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#services-icon2"></use>
+                            </svg>
+                        </a>
+
+                        <a class="icon-link column-icon" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#services-icon3"></use>
+                            </svg>
+                        </a>
+
+                        <a class="icon-link column-icon" href="#">
+                            <svg class="icon">
+                                <use xlink:href="#services-icon4"></use>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="services-text">
+                        <h2 class="subtitle">Graphic Design</h2>
+                        <p>At vero eos et accusamus et <span class="text-green">iusto</span> odio dignissimos <strong>ducimus</strong> qui blanditiis praesentium volup-<br>tatum deleniti</p><p>quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, <span class="text-green">similique sunt</span> in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
+                    </div>
+
+                    <div class="services-diagram">
+                            <div class="diagram-group">
+                               <svg class="diagram">
+                                    <use xlink:href="#diagram-services1"></use>
+                                </svg>
+                                <div class="circle"></div>
+                                <p class="diagram-text">80%</p>
+                                <p class="diagram-name">Brending</p>
+                            </div>
+
+                            <div class="diagram-group">
+                               <svg class="diagram">
+                                    <use xlink:href="#diagram-services2"></use>
+                                </svg>
+                                <div class="circle"></div>
+                                <p class="diagram-text">75%</p>
+                                <p class="diagram-name">Web design</p>
+                            </div>
+
+                            <div class="diagram-group">
+                               <svg class="diagram">
+                                    <use xlink:href="#diagram-services3"></use>
+                                </svg>
+                                <div class="circle"></div>
+                                <p class="diagram-text">60%</p>
+                                <p class="diagram-name">UI/UX</p>
+                            </div>
+                    </div>
+                </div> <!--/services-content-->
+            </div><!--/services-->
+
+            <div class="slogan">
+                <div class="container slogan-container">
+                    <div class="slogan-text">
+                        <h1 class="title slogan-title">Impressed?</h1>
+                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias</p>
+                        <p class="slogan-author"><b>- Jonathan Dwight</b> <br>Creatice Director,  <span class="text-green">Code Cafe</span></p>
+                    </div>
+                    <img class="slogan-img" src="img/slogan-img.png" alt="">
+                </div>
+            </div><!--/slogan-->
+
+            <div class="portfolio" id="portfolio">
+               <div class="container">
+                   <h1 class="title">the portfolio</h1>
+                   <h2 class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br> blanditiis praesentium</h2>
+                   <nav class="nav-portfolio">
+                       <a class="nav-link-portfolio" href="#">All works</a>
+                       <a class="nav-link-portfolio" href="#">Print</a>
+                       <a class="nav-link-portfolio" href="#">Identity</a>
+                       <a class="nav-link-portfolio" href="#">Branding</a>
+                       <a class="nav-link-portfolio" href="#">Web</a>
+                       <a class="nav-link-portfolio" href="#">HTML</a>
+                       <a class="nav-link-portfolio" href="#">Wordpress</a>
+                   </nav>
+
+                   <div class="work">
+                      <div class="img-column">
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work1.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work5.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work9.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                      </div>
+
+                      <div class="img-column">
+                        <div class="work-img">
+                            <img src="img/portfolio/work2.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work6.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work10.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                      </div>
+
+                      <div class="img-column">
+                        <div class="work-img">
+                            <img src="img/portfolio/work3.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work7.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work11.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                      </div>
+
+                      <div class="img-column">
+                        <div class="work-img">
+                            <img src="img/portfolio/work4.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work8.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="work-img">
+                            <img src="img/portfolio/work12.png" alt="">
+                            <div class="work-hover">
+                                <div class="work-hover__item">Title Here</div>
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#link"></use>
+                                    </svg>
+                                </a>
+                                <a href="#">
+                                    <svg class="icon__portfolio">
+                                        <use xlink:href="#heart"></use>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+
+                      </div>
+
+                   </div><!--/work-->
+                   <div class="portfolio-footer">
+                       <p class="portfolio-footer__text">At vero eos et <b>accusamus</b> et iusto odio <b>dignissimos</b> ducimus qui blanditiis </p>
+                       <button class="btn btn-wite">Start Project</button>
+                   </div>
+               </div><!--/container-->
+            </div><!--/portfolio-->
+
+            <div class="team" id="team">
+                <h1 class="title">the team</h1>
+                <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+                <div class="team-inner">
+                    <div class="team__photo">
+                        <img class="team__img" src="img/team-photo.png" alt="">
+                    </div>
+                    <div class="team-card">
+                        <p class="team__name">Abdullah Noman<p>
+                        <p class="team__function">Creative Director, Code Cafe</p>
+                        <p class="team-text">At vero eos et accusamus et iusto odio dignissimos <br>ducimus qui blanditiis praesentium</p>
+                        <div class="ability">
+                            <div class="team__ability">
+                                <p>branding</p><p>80%</p>
+                            </div>
+        
+                            <div class="team__ability ability65">
+                                <p>web design</p><p>65%</p>
+                            </div>
+        
+                            <div class="team__ability ability75">
+                                <p>user interface</p><p>75%</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ability-adaptive">
+                        <div class="team__ability">
+                            <p>branding</p><p>80%</p>
+                        </div>
+    
+                        <div class="team__ability ability65">
+                            <p>web design</p><p>65%</p>
+                        </div>
+    
+                        <div class="team__ability ability75">
+                            <p>user interface</p><p>75%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider">
+                    <div class="slider-item"></div>
+                    <div class="slider-item-empty"></div>
+                    <div class="slider-item-empty"></div>
+                </div>
+            </div>
+            <div class="team-footer">
+                    <p>Already Loved Us? Let’s talk!</p>
+                    <button class="btn btn-wite">Contanct us</button>
+            </div><!--/team-->
+
+            <div class="testimonials">
+                <h1 class="title">testimonials</h1>
+                <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br>blanditiis praesentium</p>
+                <div class="container">
+                    <div class="testimonials-inner">
+                        <div class="testimonials-content">
+                            <img class="testimonials-photo" src="img/testimonials-photo.png" alt="">
+                            <div class="testimonials__text">
+                                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia.</p>
+                                <p class="testimonials-author"><span class="text-green"><b>partho</b></span><br>FOUNDER, ARTWAYS BD</p>
+                            </div>
+                        </div>
+                         <div class="slider slider-testimonials">
+                            <div class="slider-item"></div>
+                            <div class="slider-item-empty"></div>
+                            <div class="slider-item-empty"></div>
+                        </div>
+                    </div><!--/testimonials-inner-->
+                </div><!--/container-->
+            </div><!--/testimonials-->
+            <div class="news" id="blog">
+                <div class="container">
+                    <h1 class="title title-wite">latest news</h1>
+                    <p class="title-text title-text-wite">At vero eos et accusamus et iusto odio dignissimos ducimus qui<br> blanditiis praesentium</p>
+                    <div class="news-content">
+                        <h2 class="subtitle subtitle-wite">The trending Landing Pages</h2>
+                        <p class="news-author">by <span class="text-green">Kabir Uddin</span></p>
+                        <p class="counter">6950 Likes - 243 Comments - 703 shares</p>
+                        <p class="news-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio...  </p>
+                        <a class="read-more" href="#">+ Read More</a>
+                    </div>
+                </div>
+            </div><!--/news-->
+
+
+            <div class="price">
+                <h1 class="title">our price</h1>
+                <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br>blanditiis praesentium</p>
+                <div class="price-inner">
+                    <div class="price-card">
+                        <div class="card-title">
+                            premium
+                        </div>
+                        <p class="card-content"><span class="text-green">$60</span><br>Per Month</p>
+                    </div>
+
+                    <div class="price-card price-card-start">
+                        <p>Full Branding<br>
+                        Project Management
+                        <br>Unlimited Revisions
+                        <br>24/7 h Service
+                        <br>Free Domain
+                        <br>Free Hosting</p>
+                        <div class="card-title card-title-start">
+                            Let's start >
+                        </div>
+                   </div>
+
+                    <div class="price-card">
+                        <div class="card-title">
+                            exclusive
+                        </div>
+                        <p class="card-content"><span class="text-green">$80</span><br>Per Month</p>
+                    </div>
+                </div>
+            </div><!--/price-->
+
+            <div class="subscribe">
+                <h1 class="title title-subscribe">subscribe us</h1>
+                <p class="title-text title-text-subscribe">At vero eos et accusamus et iusto odio dignissimos ducimus <br>qui blanditiis praesentium</p>
+                <form  class="form-subscribe" action="/" method="post">
+                    <input  class="input-subscribe" name="email" type="email" placeholder="Email address">
+                    <button class="btn-subscribe" type="submit">Submit</button>
+                </form>
+            </div><!--/subscribe-->
+
+            <div class="contacts" id="contact">
+                <h1 class="title">Contact us</h1>
+                <p class="title-text">At vero eos et accusamus et iusto odio dignissimos ducimus qui <br>blanditiis praesentium</p>
+                <div class="contacts-inner">
+                    <div class="contacts-card">
+                        <div class="contacts-photo">
+                        <a href="mailto:hello@codecafe.com">
+                            <svg class="contact-icon">
+                                <use xlink:href="#mail"></use>
+                            </svg>
+                        </a>
+                        </div>
+
+                        <div class="contacts-content">
+                            <p class="contacts-title">email</p>
+                            <a class="contacts-link " href="mailto:hello@codecafe.com">
+                                hello@codecafe.com
+                            </a>
+                            <a class="contacts-link" href="mailto:Personal@codecafe.com">Personal@codecafe.com</a>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-photo map-pointer">
+                        <a href="#">
+                            <svg class="contact-icon">
+                                <use xlink:href="#map-pointer"></use>
+                            </svg>
+                        </a>
+                        </div>
+
+                        <div class="contacts-content">
+                            <p class="contacts-title">our office</p>
+                            <address class="contacts-link address">240 Bhatikhana, 8200 Barisal <br>Bangladesh</address>
+                        </div>
+                    </div>
+
+                    <div class="contacts-card">
+                        <div class="contacts-photo phone">
+                        <a href="tel:+001166996644">
+                            <svg class="contact-icon">
+                                <use xlink:href="#telephone"></use>
+                            </svg>
+                        </a>
+                        </div>
+
+                        <div class="contacts-content">
+                            <p class="contacts-title">phone</p>
+                            <a class="contacts-link " href="tel:+001166996644">
+                                +00 11 66 99 66 44
+                            </a><br>
+                            <a class="contacts-link" href="tel:11996644065">11 99 66 44 065</a>
+                        </div>
+                    </div>
+                </div><!--/contacts-inner-->
+            </div><!--/contacts-->
+
+            <div class="contacts-form">
+               <form class="form" action="/" method="post">
+                   <div class="form-group">
+                       <input class="form-input" name="name" type="text" placeholder="Your name">
+                   </div>
+                   <div class="form-group">
+                       <input class="form-input" name="email" type="email" placeholder="Email address">
+                   </div>
+                   <div class="form-group">
+                       <input class="form-input" name="address" type="text" placeholder="Subject">
+                   </div>
+
+                   <div class="form-group-text">
+                       <textarea class="form-text" name="text"></textarea>
+                   </div>
+                   <button class="form-btn" type="submit">submit now</button>
+               </form>
+            </div><!--/contacts-form-->
+
+            <footer class="footer">
+                <div class="header-brand brand-footer">Bouncy</div>
+                <p class="title-text">Copyright 2021. All rights Reserved</p>
+                <div class="social-footer">
+                    <a class="social-link" href="https://www.facebook.com/">
+                        <svg class="social-icon facebook">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social-link" href="https://twitter.com/">
+                        <svg class="social-icon twitter">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social-link" href="https://linkedin.com/">
+                        <svg class="social-icon linkedin">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+
+                    <a class="social-link" href="https://www.instagram.com/">
+                        <svg class="social-icon instagram">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+
+                </div>
+            </footer>
+        </div><!--/page-->
+        <script src="./js/app.js"></script>
+    </body>
+</html>
